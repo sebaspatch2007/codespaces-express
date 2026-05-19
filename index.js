@@ -1,10 +1,10 @@
-const express = require('express')
+import express from "express"
+import usuarios from "./src/routers/usuarios.routers.js"
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
+app.use("/", usuarios)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

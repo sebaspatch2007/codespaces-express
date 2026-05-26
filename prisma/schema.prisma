@@ -4,10 +4,79 @@
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
+}
+
+model usuarios {
+  id                   Int               @id @default(autoincrement())
+  nombre               String            @db.VarChar(100)
+  apellido             String            @db.VarChar(100)
+  id_curso             Int?
+  contraseña           String            @db.VarChar(255)
+  id_tipo_documento    Int
+  numero_documento     String            @unique @db.VarChar(30)
+  id_rol               Int
+  curso                curso?            @relation(fields: [id_curso], references: [id])
+  tipo_documento       tipo_documento    @relation(fields: [id_tipo_documento], references: [id])
+  rol                  rol               @relation(fields: [id_rol], references: [id])
+  registrosProfesor    registro[]        @relation("ProfesorRegistro")
+  registrosUsuario     registro[]        @relation("UsuarioRegistro")
+}
+
+model grupo {
+  id      Int      @id @default(autoincrement())
+  grupo   String   @db.VarChar(10)
+  cursos  curso[]
+}
+
+model jornada {
+  id       Int      @id @default(autoincrement())
+  jornada  String   @db.VarChar(30)
+  cursos   curso[]
+}
+
+model lugar {
+  id         Int        @id @default(autoincrement())
+  nombre     String     @db.VarChar(100)
+  registros  registro[]
+}
+
+model rol {
+  id        Int         @id @default(autoincrement())
+  rol       String      @db.VarChar(50)
+  usuarios  usuarios[]
+}
+
+model tipo_documento {
+  id        Int         @id @default(autoincrement())
+  nombre    String      @db.VarChar(50)
+  usuarios  usuarios[]
+}
+
+model curso {
+  id           Int       @id @default(autoincrement())
+  id_grupo     Int
+  id_jornada   Int
+  id_grado     Int
+  grupo        grupo     @relation(fields: [id_grupo], references: [id])
+  jornada      jornada   @relation(fields: [id_jornada], references: [id])
+  usuarios     usuarios[]
+}
+
+model registro {
+  id              Int        @id @default(autoincrement())
+  inicio          DateTime   @db.Time(0)
+  final           DateTime   @db.Time(0)
+  id_profesor     Int
+  id_usuario      Int
+  id_lugar        Int
+  descrip         String?    @db.Text
+  horas_totales   Decimal?   @db.Decimal(10, 2)
+  profesor        usuarios   @relation("ProfesorRegistro", fields: [id_profesor], references: [id])
+  usuario         usuarios   @relation("UsuarioRegistro", fields: [id_usuario], references: [id])
+  lugar           lugar      @relation(fields: [id_lugar], references: [id])
 }

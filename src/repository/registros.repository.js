@@ -1,15 +1,23 @@
 import Prisma from"../prisma.js"
 
-export const createregistros =  () => {
+export const createRegistros =  (RegistrosData) => {
+    return Prisma.Registros.create({Data: RegistrosData})
 
 }
 
-export const readregistros = () => {
+export const readRegistros = () => {
+    return Prisma.Registros.findMany();
 
 }
-export const updateregistros = () => {
+export const updateRegistros = (RegistrosId, RegistrosData) => {
+    return Prisma.Registros.update({
+        where: {id: RegistrosId}, 
+        data: RegistrosData})
 
 }
-export const deleteregistros = () => { 
+export const deleteRegistros = (RegistrosId) => { 
+    return Prisma.Registros.delete({
+        where: {id: RegistrosId}
+    })
 
 }

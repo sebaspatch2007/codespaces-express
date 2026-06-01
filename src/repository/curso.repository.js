@@ -1,15 +1,22 @@
 import Prisma from"../prisma.js"
 
-export const createcurso =  () => {
+export const createCurso =  (CursoData) => {
+    return Prisma.Curso.create({Data: CursoData})
 
 }
 
-export const readcurso = () => {
-
+export const readCurso = () => {
+    return Prisma.Curso.findMany();
 }
-export const updatecurso = () => {
 
+export const updateCurso = (CursoId, CursoData) => {
+    return Prisma.Curso.update({
+        where: {id: CursoId},
+        data: CursoData
+    })
 }
-export const deletecurso = () => { 
-
+export const deleteCurso = (CursoId) => {
+    return Prisma.Curso.delete({
+        where: {id: CursoId}
+    })
 }

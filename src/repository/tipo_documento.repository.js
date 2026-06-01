@@ -1,15 +1,22 @@
 import Prisma from"../prisma.js"
 
-export const createtipo_documento =  () => {
+export const createTipo_documento =  (Tipo_documentoData) => {
+    return Prisma.Tipo_documento.create({Data: Tipo_documentoData})
 
 }
 
-export const readtipo_documento = () => {
+export const readTipo_documento = () => {
+    return Prisma.Tipo_documento.findMany();
 
 }
-export const updatetipo_documento = () => {
+export const updateTipo_documento = (Tipo_documentoId, Tipo_documentoData) => {
+    return Prisma.Tipo_documento.update({
+        where: {id: Tipo_documentoId}, 
+        data: Tipo_documentoData})
 
 }
-export const deletetipo_documento = () => { 
-
+export const deleteTipo_documento = (Tipo_documentoId) => {
+    return Prisma.Tipo_documento.delete({
+        where: {id: Tipo_documentoId}
+    })
 }

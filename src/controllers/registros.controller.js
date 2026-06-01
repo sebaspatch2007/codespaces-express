@@ -1,4 +1,4 @@
-export const findUsers = () => {
+export const findregistros = () => {
 
 }
 export  const createUsers = () => {

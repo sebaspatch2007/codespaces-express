@@ -1,17 +1,17 @@
-import { createLugar, deleteLugar, readLugar, updateLugar } from "../controllers/lugar.controller";
+import { createlugar, deletelugar, readlugar, updatelugar } from "../repository/lugar.repository";
 
 export const createLugarService = (userData) => {
-    return createLugar(userData);
+    return createlugar(userData);
 }
 
 export const readLugarService = () => {
-    return readLugar();
+    return readlugar();
 }
 
 export const updateLugarService = (userId, userData) => {
-    return updateLugar(userId, userData);
+    return updatelugar(userId, userData);
 }
 
 export const deleteLugarService = (userId) => {
-    return deleteLugar(userId);
+    return deletelugar(userId);
 }

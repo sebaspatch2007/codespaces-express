@@ -1,4 +1,4 @@
-import { createRegistros, deleteRegistros, readRegistros, updateRegistros } from "../controllers/registros.controller";
+import { createRegistros, deleteRegistros, readRegistros, updateRegistros } from "../repository/registros.repository";
 
 export const createRegistrosService = (userData) => {
     return createRegistros(userData);

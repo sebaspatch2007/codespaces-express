@@ -1,4 +1,4 @@
-import { createRol, deleteRol, readRol, updateRol } from "../controllers/rol.controller";
+import { createRol, deleteRol, readRol, updateRol } from "../repository/rol.repository";
 
 export const createRolService = (userData) => {
     return createRol(userData);

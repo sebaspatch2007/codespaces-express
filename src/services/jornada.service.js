@@ -1,17 +1,17 @@
-import { createJornada, deleteJornada, readJornada, updateJornada } from "../controllers/jornada.controller";
+import { createjornada, deletejornada, readjornada, updatejornada } from "../repository/jornada.repository";
 
 export const createJornadaService = (userData) => {
-    return createJornada(userData);
+    return createjornada(userData);
 }
 
 export const readJornadaService = () => {
-    return readJornada();
+    return readjornada();
 }
 
 export const updateJornadaService = (userId, userData) => {
-    return updateJornada(userId, userData);
+    return updatejornada(userId, userData);
 }
 
 export const deleteJornadaService = (userId) => {
-    return deleteJornada(userId);
+    return deletejornada(userId);
 }

@@ -1,20 +1,16 @@
-import { readusuarios } from "../repository/usuarios.repository.js";
-import { createusuarios } from "../repository/usuarios.repository.js";
-import { updateusuarios } from "../repository/usuarios.repository.js";
-import { deleteusuarios } from "../repository/usuarios.repository.js";
-
+import { createUser, deleteUser, readUser, readusuarios, updateUser } from "../repository/usuarios.repository.js";
 export const createUsuariosService = (userData) => {
-    return createUsuarios(userData);
+    return createUser(userData);
 }
 
 export const readUsuariosService = () => {
-    return readUsuarios();
+    return readUser();
 }
 
 export const updateUsuariosService = (userId, userData) => {
-    return updateUsuarios(userId, userData);
+    return updateUser(userId, userData);
 }
 
 export const deleteUsuariosService = (userId) => {
-    return deleteUsuarios(userId);
+    return deleteUser(userId);
 }

@@ -1,13 +1,10 @@
 import { Router } from "express";
-import { findUsers, createUsers, updateUsers, deleteUsers } from "../controllers/usuarios.controller.js";
-const router= Router
+import { controllerfindUsuarios, createUsuarios, updateUsuarios, deleteUsuarios } from "../controllers/usuarios.controller";
+const router= Router();
 
-router.get("/", findUsers)
-
-router.post("/", createUsers)
-
-router.patch("/", updateUsers)
-
-router.delete("/", deleteUsers)
+router.post("/", createUsuarios)
+router.get("/", controllerfindUsuarios)
+router.put("/:id", updateUsuarios)
+router.delete("/:id", deleteUsuarios)
 
 export default router;

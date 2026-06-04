@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { controllerfindUsuarios, createUsuarios, updateUsuarios, deleteUsuarios } from "../controllers/usuarios.controller";
+import { createUsuarios, updateUsuarios, deleteUsuarios, readUsuarios } from "../controllers/usuarios.controller";
 const router= Router();
 
 router.post("/", createUsuarios)
-router.get("/", controllerfindUsuarios)
+router.get("/", readUsuarios)
 router.put("/:id", updateUsuarios)
 router.delete("/:id", deleteUsuarios)
 

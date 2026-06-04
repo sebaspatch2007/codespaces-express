@@ -1,7 +1,7 @@
 import { createUsuariosService,deleteUsuariosService,readUsuariosService,updateUsuariosService,} from "../services/usuarios.service"
 
 
-export const controllerfindUsuarios = async (req, res) => {
+export const readUsuarios = async (req, res) => {
     try{
         const user = await readUsuariosService(req.body);
         res.status(201).json(user);

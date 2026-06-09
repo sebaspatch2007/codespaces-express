@@ -1,5 +1,5 @@
-import {routers} from "express";
-import { createLugar, deleteLugar, readLugar, updateLugar } from "../controllers/lugar.controller";
+import {Router} from "express";
+import { createLugar, deleteLugar, readLugar, updateLugar } from "../controllers/lugar.controller.js";
 const router= Router();
 router.get("/", readLugar);
 

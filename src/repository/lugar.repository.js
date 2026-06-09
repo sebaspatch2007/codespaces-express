@@ -1,23 +1,23 @@
 import Prisma from"../prisma.js"
 
 export const createlugar =  (lugarData) => {
-    return Prisma.Lugar.create({Data: lugarData})
+    return Prisma.lugar.create({Data: lugarData})
 
 }
 
 export const readlugar = () => {
-    return Prisma.Lugar.findMany();
+    return Prisma.lugar.findMany();
 
 }
 export const updatelugar = (lugarId, lugarData) => {
-    return Prisma.Lugar.update({
+    return Prisma.lugar.update({
         where: {id: lugarId}, 
         data: lugarData})
 
 }
 export const deletelugar = (lugarId) => { 
 
-    return Prisma.Lugar.delete({
+    return Prisma.lugar.delete({
         where: {id: lugarId}
     })
 }

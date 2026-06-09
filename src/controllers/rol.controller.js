@@ -1,4 +1,4 @@
-import { createRolService, deleteRolService, readRolService, updateRolService } from "../services/rol.service";
+import { createRolService, deleteRolService, readRolService, updateRolService } from "../services/rol.service.js";
 
 export const createRol = async (req, res) => {
     try{
@@ -9,7 +9,7 @@ export const createRol = async (req, res) => {
     }
 }
 
-export const readRol = async () => {
+export const readRol = async (req, res) => {
     try {
         const user = await readRolService();
         res.status(200).json(user);

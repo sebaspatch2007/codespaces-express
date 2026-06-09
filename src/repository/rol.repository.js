@@ -6,7 +6,7 @@ export const createRol =  (rolData) => {
 }
 
 export const readRol = () => {
-    return Prisma.Rol.findMany();
+    return Prisma.rol.findMany();
 
 }
 export const updateRol = (rolId, rolData) => {

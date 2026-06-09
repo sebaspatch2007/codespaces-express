@@ -1,22 +1,22 @@
 import Prisma from"../prisma.js"
 
 export const createGrupo =  (GrupoData) => {
-    return Prisma.Grupo.create({Data: GrupoData})
+    return Prisma.grupo.create({Data: GrupoData})
 
 }
 
 export const readGrupo = () => {
-    return Prisma.Grupo.findMany();
+    return Prisma.grupo.findMany();
 
 }
 export const updateGrupo = (GrupoId, GrupoData) => {
-    return Prisma.Grupo.update({
+    return Prisma.grupo.update({
         where: {id: GrupoId}, 
         data: GrupoData})
 
 }
 export const deleteGrupo = (GrupoId) => { 
-    return Prisma.Grupo.delete({
+    return Prisma.grupo.delete({
         where: {id: GrupoId}
     })
 

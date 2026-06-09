@@ -6,7 +6,7 @@ export const createTipo_documento =  (Tipo_documentoData) => {
 }
 
 export const readTipo_documento = () => {
-    return Prisma.Tipo_documento.findMany();
+    return Prisma.tipo_documento.findMany();
 
 }
 export const updateTipo_documento = (Tipo_documentoId, Tipo_documentoData) => {

@@ -1,4 +1,4 @@
-import { createRegistrosService,deleteRegistrosService, readRegistrosService, updateRegistrosService } from "../services/registros.service"
+import { createRegistrosService,deleteRegistrosService, readRegistrosService, updateRegistrosService } from "../services/registros.service.js"
 
 export const readRegistros = async (req, res) => {
     try{

@@ -1,4 +1,4 @@
-import { createJornadaService,deleteJornadaService,readJornadaService, updateJornadaService } from "../services/jornada.service"
+import { createJornadaService,deleteJornadaService,readJornadaService, updateJornadaService } from "../services/jornada.service.js"
 export const createJornada = async (req, res) => {
     try{
         const jornada = await createJornadaService(req.body);

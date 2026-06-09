@@ -1,22 +1,22 @@
 import Prisma from"../prisma.js"
 
 export const createjornada =  (jornadaData) => {
-    return Prisma.Jornada.create({Data: jornadaData})
+    return Prisma.jornada.create({Data: jornadaData})
 
 }
 
 export const readjornada = () => {
-    return Prisma.Jornada.findMany();
+    return Prisma.jornada.findMany();
 }
 
 export const updatejornada = (jornadaId, jornadaData) => {
-    return Prisma.Jornada.update({
+    return Prisma.jornada.update({
         where: {id: jornadaId}, 
         data: jornadaData})
 
 }
 export const deletejornada = (jornadaId) => { 
-    return Prisma.Jornada.delete({
+    return Prisma.jornada.delete({
         where: {id: jornadaId}
     })
 

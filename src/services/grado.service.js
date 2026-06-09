@@ -1,4 +1,4 @@
-import { createGrupo, deleteGrupo, readGrupo, updateGrupo } from "../repository/grupo.repository";
+import { createGrupo, deleteGrupo, readGrupo, updateGrupo } from "../repository/grupo.repository.js";
 
 export const createGradoService = (userData) => {
     return createGrupo(userData);

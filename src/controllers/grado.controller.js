@@ -1,4 +1,4 @@
-import { createGradoService, deleteGradoService,readGradoService, updateGradoService } from "../services/grado.service"
+import { createGradoService, deleteGradoService,readGradoService, updateGradoService } from "../services/grado.service.js"
 export const createGrado = async (req, res) => {
     try{
         const grado = await createGradoServices(req.body);

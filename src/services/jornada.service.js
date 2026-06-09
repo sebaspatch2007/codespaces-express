@@ -1,4 +1,4 @@
-import { createjornada, deletejornada, readjornada, updatejornada } from "../repository/jornada.repository";
+import { createjornada, deletejornada, readjornada, updatejornada } from "../repository/jornada.repository.js";
 
 export const createJornadaService = (userData) => {
     return createjornada(userData);

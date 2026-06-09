@@ -1,4 +1,4 @@
-import {route} from "express";
+import {Router} from "express";
 import { createJornada, updateJornada, deleteJornada, readJornada } from "../controllers/jornada.controller.js";
 const router= Router();  
 router.get("/", readJornada);

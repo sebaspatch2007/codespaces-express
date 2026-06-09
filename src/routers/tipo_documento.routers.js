@@ -1,6 +1,6 @@
-import {router} from "express";
+import {Router} from "express";
 import { readTipoDocumento, createTipoDocumento, updateTipoDocumento, deleteTipoDocumento } from "../controllers/tipo_documento.controller.js";
-const router= Router();
+const router = Router();
 
 router.get("/", readTipoDocumento);
 

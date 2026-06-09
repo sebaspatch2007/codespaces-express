@@ -1,4 +1,4 @@
-import { createTipoDocumentoService, deleteTipoDocumentoService,readTipoDocumentoService,updateTipoDocumentoService } from "../services/tipo_documento.service"
+import { createTipoDocumentoService, deleteTipoDocumentoService,readTipoDocumentoService,updateTipoDocumentoService } from "../services/tipo_documento.service.js"
 export const createTipoDocumento = async (req, res) =>  {
     try{
         const user = await createTipoDocumentoService(req.body);
@@ -8,7 +8,7 @@ export const createTipoDocumento = async (req, res) =>  {
     }
 }   
 
-export const readTipoDocumento = async () => {
+export const readTipoDocumento = async (req, res) => {
     try { 
         const user = await readTipoDocumentoService();
         res.status(200).json(user);

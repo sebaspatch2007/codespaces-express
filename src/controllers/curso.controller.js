@@ -1,4 +1,4 @@
-import { createCursoService,deleteCursoService,readCursoService,updateCursoService } from "../services/curso.service"
+import { createCursoService,deleteCursoService,readCursoService,updateCursoService } from "../services/curso.service.js"
 export const createCurso = async (req, res) => {
     try{
         const curso = await createCursoService(req.body);

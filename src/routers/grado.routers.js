@@ -1,4 +1,4 @@
-import {router} from "express";
+import {Router} from "express";
 import { createGrado, updateGrado, deleteGrado, readGrado } from "../controllers/grado.controller.js";
 const router= Router();
 router.get("/", readGrado);

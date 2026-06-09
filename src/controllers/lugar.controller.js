@@ -1,4 +1,4 @@
-import { createLugarService,deleteLugarService,readLugarService,updateLugarService } from "../services/lugar.service"
+import { createLugarService,deleteLugarService,readLugarService,updateLugarService } from "../services/lugar.service.js"
 export const createLugar = async (req, res) => {
     try{
         const lugar = await createLugarService(req.body);

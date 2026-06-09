@@ -1,4 +1,4 @@
-import { createlugar, deletelugar, readlugar, updatelugar } from "../repository/lugar.repository";
+import { createlugar, deletelugar, readlugar, updatelugar } from "../repository/lugar.repository.js";
 
 export const createLugarService = (userData) => {
     return createlugar(userData);

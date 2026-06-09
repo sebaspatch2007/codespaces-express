@@ -1,4 +1,4 @@
-import { createCurso, deleteCurso, readCurso, updateCurso } from "../repository/curso.repository";
+import { createCurso, deleteCurso, readCurso, updateCurso } from "../repository/curso.repository.js";
 
 export const createCursoService = (userData) => {
     return createCurso(userData);

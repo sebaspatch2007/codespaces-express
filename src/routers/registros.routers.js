@@ -1,5 +1,5 @@
 import {Router} from "express";
-import { createRegistros, deleteRegistros, readRegistros, updateRegistros } from "../controllers/registros.controller";
+import { createRegistros, deleteRegistros, readRegistros, updateRegistros } from "../controllers/registros.controller.js";
 const router= Router();
 
 router.get("/", readRegistros);

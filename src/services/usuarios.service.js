@@ -1,4 +1,4 @@
-import { createUser, deleteUser, readUser, readusuarios, updateUser } from "../repository/usuarios.repository.js";
+import { createUser, deleteUser, readUser, updateUser } from "../repository/usuarios.repository.js";
 export const createUsuariosService = (userData) => {
     return createUser(userData);
 }

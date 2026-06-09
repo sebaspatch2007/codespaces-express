@@ -1,15 +1,11 @@
-import express from "express"
-import curso from "./routers/curso.routers.js"
-import grado from "./routers/grado.routers.js"
-import usuario from "./routers/usuarios.routers.js"
-const app = new express
+import express from "express";
+import usuario from "./routers/usuarios.routers.js";
+const app = express();
 
-app.use("/", (req, res)=>{
-    res.send("hola")
-})
-app.use("/curso", curso)
-app.use("/grado", grado)
-app.use("/usuario", usuario)
+app.use(express.json());
+app.use("/usuario", usuario);
+app.get("/", (req, res) => {
+  res.send("hola....");
+});
 
-
-export default app
+export default app;

@@ -1,4 +1,4 @@
-import {route} from "express";
+import {Router} from "express";
 import { createCurso, updateCurso, deleteCurso, readCurso } from "../controllers/curso.controller.js";
 const router= Router();
 router.get("/",  readCurso);

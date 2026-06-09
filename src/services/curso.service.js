@@ -1,8 +1,7 @@
 import { createCurso, deleteCurso, readCurso, updateCurso } from "../repository/curso.repository";
 
 export const createCursoService = (userData) => {
-    return createCurso
-    (userData);
+    return createCurso(userData);
 }
 
 export const readCursoService = () => {

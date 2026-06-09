@@ -1,11 +1,13 @@
-const express = requiere('express')
+import express from "express"
 const app = express()
-const port = 3000
+const startServer = async ()=> {
+    try {
+        app.listen(3000, ()=> {
+            console.log('server listo http://localhost:3000')
+        })
+    } catch (error) {
+        console.log("error en el server",  error)
+    }
+}
 
-app.get('/',(req, res) => {
-    res.send('Hello World!')
-})
-
-app.listen(port, ()=>{
-    console.log('Example app listening on port ${port}')
-})
+startServer();

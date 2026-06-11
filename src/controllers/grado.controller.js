@@ -11,7 +11,7 @@ export const createGrado = async (req, res) => {
 
 export const readGrado = async (req, res) => {
     try{
-        const grados = await readGradoService();
+        const grado = await readGradoService();
         res.status(200).json(grados);
     }catch(e){
         res.status(400).json({error: e.message});

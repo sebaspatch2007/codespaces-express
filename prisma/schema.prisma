@@ -27,9 +27,9 @@ model usuarios {
   registrosUsuario     registro[]        @relation("UsuarioRegistro")
 }
 
-model grupo {
+model grado {
   id      Int      @id @default(autoincrement())
-  grupo   String   @db.VarChar(10)
+  grado  String   @db.VarChar(10)
   cursos  curso[]
 }
 
@@ -62,7 +62,7 @@ model curso {
   id_grupo     Int
   id_jornada   Int
   id_grado     Int
-  grupo        grupo     @relation(fields: [id_grupo], references: [id])
+  grado       grado    @relation(fields: [id_grado], references: [id])
   jornada      jornada   @relation(fields: [id_jornada], references: [id])
   usuarios     usuarios[]
 }

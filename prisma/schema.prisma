@@ -59,7 +59,6 @@ model tipo_documento {
 
 model curso {
   id           Int       @id @default(autoincrement())
-  id_grupo     Int
   id_jornada   Int
   id_grado     Int
   grado       grado    @relation(fields: [id_grado], references: [id])

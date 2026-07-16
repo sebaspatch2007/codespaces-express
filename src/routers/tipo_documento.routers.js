@@ -6,7 +6,7 @@ router.get("/", readTipoDocumento);
 
 router.post("/", createTipoDocumento);
 
-router.patch("/:id", updateTipoDocumento);
+router.put("/:id", updateTipoDocumento);
 
 router.delete("/:id", deleteTipoDocumento);
 

@@ -7,7 +7,7 @@ router.get("/", readRol);
 
 router.post("/", createRol);
 
-router.patch("/:id", updateRol);
+router.put("/:id", updateRol);
 
 router.delete("/:id", deleteRol);   
 
